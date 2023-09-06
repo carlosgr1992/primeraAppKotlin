@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import com.android.appandroidmaster.R
 
 class ResultadoIMCActivity : AppCompatActivity() {
@@ -41,8 +42,9 @@ class ResultadoIMCActivity : AppCompatActivity() {
 
     private fun initListeners() {
         btnRecalcular.setOnClickListener {
-            intent = Intent(this,IMCAppActivity::class.java)
-            startActivity(intent)
+            /*intent = Intent(this,IMCAppActivity::class.java)
+            startActivity(intent)*/
+            onBackPressed()
         }
     }
 
@@ -52,21 +54,25 @@ class ResultadoIMCActivity : AppCompatActivity() {
 
             in Double.MIN_VALUE..18.49 -> {
                 textoIMCNormal.text = getString(R.string.muyBajo)
+                textoIMCNormal.setTextColor(ContextCompat.getColor(this,R.color.pesoCritico))
                 textoIMCNumero.text = String.format("%.2f",resultadoImc)
                 textoIMCTextoCompleto.text = getString(R.string.textoMuyBajo)
             }
             in 18.50..25.00 -> {
                 textoIMCNormal.text = getString(R.string.normal)
+                textoIMCNormal.setTextColor(ContextCompat.getColor(this,R.color.bajoPeso))
                 textoIMCNumero.text = String.format("%.2f",resultadoImc)
                 textoIMCTextoCompleto.text = getString(R.string.textoNormal)
             }
             in 25.01..29.99 -> {
                 textoIMCNormal.text = getString(R.string.ligeroSobrepeso)
+                textoIMCNormal.setTextColor(ContextCompat.getColor(this,R.color.pesoMedio))
                 textoIMCNumero.text = String.format("%.2f",resultadoImc)
                 textoIMCTextoCompleto.text = getString(R.string.textoLigeroSobrepeso)
             }
             in 30.0..Double.MAX_VALUE -> {
                 textoIMCNormal.text = getString(R.string.sobrepeso)
+                textoIMCNormal.setTextColor(ContextCompat.getColor(this,R.color.pesoCritico))
                 textoIMCNumero.text = String.format("%.2f",resultadoImc)
                 textoIMCTextoCompleto.text = getString(R.string.textoSobrepeso)
             }
