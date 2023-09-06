@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">AppCarlosGR</string>
+    <string name="female">Mujer</string>
+    <string name="male">Hombre</string>
+    <string name="height">Altura</string>
+    <string name="peso">Peso</string>
+    <string name="alturaBase">120 cm</string>
+    <string name="pesoMinimo">70</string>
+    <string name="edad">Edad</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultIMC">Resultado</string>
+    <string name="btnRecalcular">Recalcular</string>
+
+    <string name="muyBajo">Excesivamente bajo</string>
+    <string name="normal">Normal</string>
+    <string name="ligeroSobrepeso">Ligero sobrepeso</string>
+    <string name="sobrepeso">Obesidad</string>
+
+    <string name="textoMuyBajo">Estás por debajo del peso ideal según tu peso y altura</string>
+    <string name="textoNormal">Estás en tu peso ideal según tu peso y altura</string>
+    <string name="textoLigeroSobrepeso">Estás ligeramente por encima de tu peso ideal según tu peso y altura</string>
+    <string name="textoSobrepeso">Estas muy por encima de tu peso ideal según tu peso y altura</string>
+
+
+</resources>
